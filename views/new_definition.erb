@@ -1,6 +1,6 @@
 <h2>Enter your definition!</h2>
 
-<form action="/words/:id/definitions" method="post">
+<form action="/words/ <%= @word.id() %>/definitions" method="post">
   <label>Definition:</label>
   <input type="text" name="description">
   <button type="submit">Enter</button>
