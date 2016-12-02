@@ -14,4 +14,11 @@ describe(Definition) do
       expect(Definition.clear()).to(eq([]))
     end
   end
+
+  describe('#add') do
+    it "will add description to definitions" do
+      definition = Definition.new(:description => 'this is a sentance.')
+      expect(definition.add()).to(eq([definition]))
+    end
+  end
 end
