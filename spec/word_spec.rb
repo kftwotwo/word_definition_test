@@ -20,7 +20,7 @@ describe(Word) do
     end
 
     it "will return part of speech for word" do
-      word = Word.new(:part => 'Computer', :part => "subject")
+      word = Word.new(:part => "subject")
       word.add()
       expect(word.part()).to(eq("subject"))
     end
