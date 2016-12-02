@@ -18,6 +18,12 @@ describe(Word) do
       word.add()
       expect(word.id()).to(eq(1))
     end
+
+    it "will return part of speech for word" do
+      word = Word.new(:part => 'Computer', :part => "subject")
+      word.add()
+      expect(word.part()).to(eq("subject"))
+    end
   end
 
   describe('.clear') do

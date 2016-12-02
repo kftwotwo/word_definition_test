@@ -1,10 +1,11 @@
 class Word
-  attr_reader(:name, :id)
+  attr_reader(:name, :id, :part)
 
   @@words = []
   def initialize(attributes)
     @name = attributes[:name]
     @id = @@words.length + 1
+    @part = attributes[:part]
   end
 
   def add
