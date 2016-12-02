@@ -41,4 +41,16 @@ describe(Definition) do
       expect(Definition.all()).to(eq([definition, definition2]))
     end
   end
+
+  describe('.find') do
+    it "will find by id" do
+      definition = Definition.new(:description => 'this is a sentance.')
+      definition.add()
+      definition2 = Definition.new(:description => 'this is number 2 sentance.')
+      definition2.add()
+      definition3 = Definition.new(:description => 'this is number 3 sentance.')
+      definition3.add()
+      expect(Definition.find(3)).to(eq(3))
+    end
+  end
 end

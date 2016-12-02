@@ -19,4 +19,14 @@ class Definition
   define_singleton_method(:all) do
     @@definitions
   end
+
+  define_singleton_method(:find) do |id|
+    found = nil
+    @@definitions.each do |definition|
+      if definition.id() == id
+        found = definition.id()
+      end
+    end
+    found
+  end
 end
