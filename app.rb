@@ -15,3 +15,9 @@ get('/words') do
   @words = Word.all()
   erb(:words)
 end
+
+post('/words') do
+  word = Word.new(:name => params[:name])
+  word.add()
+  erb(:success)
+end
