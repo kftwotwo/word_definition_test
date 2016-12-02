@@ -45,5 +45,15 @@ describe(Word) do
     end
   end
 
+  describe('.find') do
+    it "will find word by id" do
+      word = Word.new(:name => 'Dog')
+      word.add()
+      word2 = Word.new(:name => 'Cat')
+      word2.add()
+      expect(Word.find(1)).to(eq(1))
+    end
+  end
+
 
 end

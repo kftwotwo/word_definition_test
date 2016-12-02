@@ -19,4 +19,14 @@ class Word
     @@words
   end
 
+  define_singleton_method(:find) do |id|
+    found = nil
+    @@words.each do |word|
+      if word.id() == id
+        found = word.id()
+      end
+    end
+    found
+  end
+
 end
