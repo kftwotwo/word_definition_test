@@ -2,7 +2,12 @@ require('rspec')
 require('./lib/word')
 
 describe(Word) do
-  describe('#name') do
+  
+  before :each do
+    Word.clear
+  end
+
+  describe('#initialize') do
     it "will return name" do
       word = Word.new(:name => 'Computer')
       expect(word.name()).to(eq('Computer'))
@@ -11,17 +16,18 @@ describe(Word) do
 
   describe('.clear') do
     it "will clear out the array" do
+      word = Word.new(:name => 'Dog')
+      word.add()
       expect(Word.clear()).to(eq([]))
     end
   end
 
-  # describe('#add') do
-  #   it "will add word to an array" do
-  #     word = Word.new(:name => 'Computer')
-  #     word.add()
-  #     expect(word.add()).to(eq([word]))
-  #   end
-  # end
+  describe('#add') do
+    it "will add word to an array" do
+      word = Word.new(:name => 'Dog')
+      expect(word.add()).to(eq([word]))
+    end
+  end
 
 
 end
