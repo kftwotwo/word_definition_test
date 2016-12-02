@@ -1,10 +1,3 @@
-Word
-
-  .id
-
-  .all
-  .find
-
 Definition
   #initialize
   #name
