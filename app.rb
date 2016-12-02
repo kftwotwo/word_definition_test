@@ -40,3 +40,13 @@ post('/words/:id/definitions') do
   word.add_definition(definition)
   erb(:success)
 end
+
+get('/all') do
+  @words = Word.all()
+  erb(:all)
+end
+
+get('/search') do
+  @words = Word.all()
+  erb(:search)
+end

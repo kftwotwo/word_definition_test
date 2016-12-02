@@ -1,0 +1,8 @@
+<h2>Here are all your words</h2>
+
+<ul>
+  <% @words.each() do |word| %>
+    <li><%= word.name() %> - <%= word.description() %></a></li>
+  <% end %>
+</ul>
+<a href="/"><button type="button" class="btn btn-primay">Home</button></a>
