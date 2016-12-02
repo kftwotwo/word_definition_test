@@ -39,7 +39,6 @@ HTML
 CSS
 Bootstrap
 Ruby
-Javascript
 ```
 ### License
 
