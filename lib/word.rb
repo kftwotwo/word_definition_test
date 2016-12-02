@@ -30,7 +30,7 @@ class Word
     found = nil
     @@words.each do |word|
       if word.id() == id
-        found = word.id()
+        found = word
       end
     end
     found

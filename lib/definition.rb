@@ -24,7 +24,7 @@ class Definition
     found = nil
     @@definitions.each do |definition|
       if definition.id() == id
-        found = definition.id()
+        found = definition
       end
     end
     found

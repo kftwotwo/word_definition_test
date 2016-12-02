@@ -63,7 +63,7 @@ describe(Word) do
       word.add()
       word2 = Word.new(:name => 'Cat')
       word2.add()
-      expect(Word.find(1)).to(eq(1))
+      expect(Word.find(1)).to(eq(word))
     end
   end
 

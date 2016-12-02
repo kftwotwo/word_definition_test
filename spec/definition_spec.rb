@@ -50,7 +50,7 @@ describe(Definition) do
       definition2.add()
       definition3 = Definition.new(:description => 'this is number 3 sentance.')
       definition3.add()
-      expect(Definition.find(3)).to(eq(3))
+      expect(Definition.find(3)).to(eq(definition3))
     end
   end
 end
