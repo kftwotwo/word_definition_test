@@ -60,4 +60,14 @@ describe(Word) do
       expect(Word.find(1)).to(eq(1))
     end
   end
+
+  describe('.search') do
+    it "will search word and return word" do
+      dog = Word.new(:name => 'Dog')
+      dog.add()
+      cat = Word.new(:name => 'Cat')
+      cat.add()
+      expect(Word.search('Dog')).to(eq(dog))
+    end
+  end
 end

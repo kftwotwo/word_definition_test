@@ -30,4 +30,14 @@ class Word
     found
   end
 
+  define_singleton_method(:search) do |search_word|
+    result = nil
+    @@words.each do |word|
+      if word.name == search_word
+        result = word
+      end
+    end
+    result
+  end
+
 end
