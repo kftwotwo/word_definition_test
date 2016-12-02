@@ -24,7 +24,19 @@ end
 
 get('/words/:id') do
   @word = Word.find(params[:id].to_i())
-  binding.pry
-  @definitions = @word.definitions().all()
+  @definitions = @word.definitions()
   erb(:definition)
+end
+
+get('/words/:id/definitions/new') do
+  @word = Word.find(params[:id].to_i())
+  erb(:new_definition)
+end
+
+post('/words/:id/definitions') do
+  word = Word.find(params[:id].to_i())
+  definition = Definition.new(:description => params[:description])
+  definition.add()
+  word.add_definition(definition)
+  erb(:success)
 end
