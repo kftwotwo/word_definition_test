@@ -2,7 +2,7 @@ require('rspec')
 require('./lib/word')
 
 describe(Word) do
-  
+
   before :each do
     Word.clear
   end
@@ -26,6 +26,16 @@ describe(Word) do
     it "will add word to an array" do
       word = Word.new(:name => 'Dog')
       expect(word.add()).to(eq([word]))
+    end
+  end
+
+  describe('#all') do
+    it "will show array of words" do
+      word = Word.new(:name => 'Dog')
+      word.add()
+      word2 = Word.new(:name => 'Cat')
+      word2.add()
+      expect(Word.all()).to(eq([word, word2]))
     end
   end
 
