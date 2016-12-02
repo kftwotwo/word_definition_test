@@ -41,7 +41,7 @@ describe(Word) do
     end
   end
 
-  describe('#all') do
+  describe('.all') do
     it "will show array of words" do
       word = Word.new(:name => 'Dog')
       word.add()
@@ -70,4 +70,12 @@ describe(Word) do
       expect(Word.search('Dog')).to(eq(dog))
     end
   end
+
+  describe('#add_definition') do
+    it "will add definition" do
+      word = Word.new(:name => 'Dog')
+      expect(word.add_definition('this is a sentence')).to(eq(['this is a sentence']))
+    end
+  end
+
 end

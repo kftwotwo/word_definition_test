@@ -1,15 +1,20 @@
 class Word
-  attr_reader(:name, :id, :part)
+  attr_reader(:name, :id, :part, :definition)
 
   @@words = []
   def initialize(attributes)
     @name = attributes[:name]
     @id = @@words.length + 1
     @part = attributes[:part]
+    @definition = []
   end
 
   def add
     @@words.push(self)
+  end
+
+  def add_definition(description)
+    @definition.push(description)
   end
 
   define_singleton_method(:clear) do
