@@ -1,10 +1,11 @@
 class Definition
-  attr_reader(:description)
+  attr_reader(:description, :id)
 
   @@definitions = []
 
   def initialize(attributes)
     @description = attributes[:description]
+    @id = @@definitions.length + 1
   end
 
   define_singleton_method(:clear) do

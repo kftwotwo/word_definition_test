@@ -11,6 +11,12 @@ describe(Definition) do
       definition = Definition.new(:description => 'this is a sentance.')
       expect(definition.description()).to(eq('this is a sentance.'))
     end
+
+    it "will give a description and id and return id" do
+      definition = Definition.new(:description => 'this is a sentance.')
+      definition.add()
+      expect(definition.id()).to(eq(1))
+    end
   end
 
   describe('.clear') do
