@@ -1,5 +1,7 @@
-<h2>Here is the definition</h2>
+<h2> <%= @word.name() %></h2>
 
-<p> <%= @definition.description() %></p>
+<h3>Here is your definition</h3>
 
-<a href="/words/ <%=  word.id() %>/definition/new">Add a definition</a>
+<p> <%= definition.description() %></p>
+
+<a href="/words/<%=  word.id() %>/definition/new">Add a definition</a>

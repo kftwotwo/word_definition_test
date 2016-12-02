@@ -24,6 +24,12 @@ describe(Word) do
       word.add()
       expect(word.part()).to(eq("subject"))
     end
+
+    it "will return an empty array" do
+      word = Word.new(:part => 'Computer')
+      word.add()
+      expect(word.definitions()).to(be_an(Array))
+    end
   end
 
   describe('.clear') do
