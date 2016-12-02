@@ -14,4 +14,8 @@ class Definition
   def add
     @@definitions.push(self)
   end
+
+  define_singleton_method(:all) do
+    @@definitions
+  end
 end
