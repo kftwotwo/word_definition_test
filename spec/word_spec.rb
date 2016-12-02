@@ -12,6 +12,12 @@ describe(Word) do
       word = Word.new(:name => 'Computer')
       expect(word.name()).to(eq('Computer'))
     end
+
+    it "will return id for word" do
+      word = Word.new(:name => 'Computer')
+      word.add()
+      expect(word.id()).to(eq(1))
+    end
   end
 
   describe('.clear') do
