@@ -1,7 +1,13 @@
 class Definition
   attr_reader(:description)
 
+  @@definitions = []
+
   def initialize(attributes)
     @description = attributes[:description]
+  end
+
+  define_singleton_method(:clear) do
+    @@definitions = []
   end
 end

@@ -8,4 +8,10 @@ describe(Definition) do
       expect(definition.description()).to(eq('this is a sentance.'))
     end
   end
+
+  describe('.clear') do
+    it "will return an empty array" do
+      expect(Definition.clear()).to(eq([]))
+    end
+  end
 end
