@@ -39,5 +39,4 @@ class Word
     end
     result
   end
-
 end
